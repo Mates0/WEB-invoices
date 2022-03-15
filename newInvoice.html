@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Invoice</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark justify-content-around">
+    <a class="navbar-brand" href="index.html">Invoices</a>
+    <a href="index.html" class="btn btn-primary">Main Menu</a>
+</nav>
+<div class="d-flex justify-content-center mt-5">
+    <div class="main-page d-flex justify-content-center flex-column w-25">
+        <div class="form-group">
+            <label for="to">Společnost</label>
+            <input type="text" class="form-control" id="to" placeholder="Alza.cz">
+        </div>
+        <div class="form-group">
+            <label for="amount">Částka (Kč)</label>
+            <input type="number" class="form-control" id="amount" placeholder="800">
+        </div>
+        <button class="btn btn-primary mt-3" id="addBtn">Přidat</button>
+    </div>
+</div>
+</body>
+</html>
