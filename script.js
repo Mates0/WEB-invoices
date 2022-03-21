@@ -1,10 +1,14 @@
 let container
 let array = [];
+let int1 = 0
+let int2 = 0
 window.onload = () => {
     container = document.getElementById('invoices-container')
     display()
 }
 function display() {
+    int1 = 0
+    int2 = 0
     container.innerHTML = ''
     fetch('http://164.92.142.211/87ec1114-49ae-4e04-9774-909f851ba57a/Invoices')
         .then(res => res.json())
@@ -31,7 +35,11 @@ function display() {
                     </table>`
                 if (invoices[i].paid === true) {
                     div2.innerHTML += one + two
-                } else div2.innerHTML += one + three
+                    int1 += invoices[i].amount
+                } else {
+                    div2.innerHTML += one + three
+                    int2 += invoices[i].amount
+                }
 
                 div1.appendChild(div2)
                 container.appendChild(div1)
@@ -47,6 +55,8 @@ function display() {
                     del(i)
                 })
             }
+            let int3 = document.getElementById("count-invoices")
+            int3.innerHTML = "Zaplacene: " + int1 + "Nezaplacene: " + int2
         })
 }
 
