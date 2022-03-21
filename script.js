@@ -1,7 +1,7 @@
 let container
 
 window.onload = () => {
-    container = document.getElementById('students-container')
+    container = document.getElementById('invoices-container')
     test()
 }
 
