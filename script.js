@@ -24,12 +24,12 @@ function display() {
                          <th scope="col" class="w-50">${invoices[i].amount},-</th>`
 
                 const two = `
-                    <th scope="col" class="w-50"><div class="d-flex flex-row"> <input type="checkbox" checked id="${i + "box"}">  <button class="btn btn-danger d-flex justify-content-center" id="${i}">Delete</button></div> </th>     
+                    <th scope="col" class="w-50"><div class="d-flex flex-row"> <input style="width: 40px; height: 40px" type="checkbox" checked id="${i + "box"}">  <button class="btn btn-danger d-flex justify-content-center" id="${i}">Smazat</button></div> </th>     
                     </tr>
                      </thead>
                       </table>`
                 const three = `
-                      <th scope="col" class="w-50"><div class="d-flex flex-row"> <input type="checkbox" id="${i + "box"}">  <button class="btn btn-danger d-flex justify-content-center" id="${i}">Delete</button></div> </th>     
+                      <th scope="col" class="w-50"><div class="d-flex flex-row"> <input style="width: 40px; height: 40px" type="checkbox" id="${i + "box"}">  <button class="btn btn-danger d-flex justify-content-center" id="${i}">Smazat</button></div> </th>     
                       </tr>
                         </thead>
                     </table>`
@@ -56,7 +56,7 @@ function display() {
                 })
             }
             let int3 = document.getElementById("count-invoices")
-            int3.innerHTML = "Zaplacene: " + int1 + "Nezaplacene: " + int2
+            int3.innerHTML = "Zaplacené faktury: " + int1 + ",-" + "Nezaplacené faktury: " + int2 +",-"
         })
 }
 
